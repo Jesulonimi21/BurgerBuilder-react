@@ -12,10 +12,8 @@ const sideDrawer=(props)=>{
     return(
         <Aux>     
             <BackDrop show={props.open} clicked={props.closed}></BackDrop>
-              <div className={attachedClasses.join(' ')}>
-          <div className={classes.Logo} onClick={()=>{
-              props.closed();
-          }}>  <Logo />
+              <div className={attachedClasses.join(' ')} onClick={props.closed}>
+          <div className={classes.Logo} >  <Logo />
           </div>
             <nav>
                 <NavigationItems  isAuthenticated={props.isAuth}/>
